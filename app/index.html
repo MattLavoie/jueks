@@ -8,16 +8,19 @@
     <script type="text/javascript" src="http://yandex.st/json2/2011-10-19/json2.min.js"></script>
     <![endif]-->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+    <script type="text/javascript" src="script/script.min.js"></script>
 
     <link rel="stylesheet" type="text/css"
           href="http://yui.yahooapis.com/2.9.0/build/reset-fonts-grids/reset-fonts-grids.css">
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style/style.min.css">
 </head>
-<body>
-<div class="top-bar">/ juː/ /ˈ<span class="e">E</span>ks/</div>
+<body data-ng-app="jueks" data-ng-controller="main">
+<div class="top-bar">
+    <a data-ng-click="changeTitle()" data-ng-bind="titleText || '/ juː/ /\'Eks/'">/ juː/ /'Eks/</a>
+</div>
 
 
 <div class="bottom-bar">
@@ -32,7 +35,7 @@
 <div class="full-page">
     <div class="content">
         <div class="page">
-            {{foo}}
+            <div data-ng-view></div>
         </div>
     </div>
 </div>

@@ -1,4 +1,6 @@
 .top-bar,.bottom-bar{text-shadow:1px 1px #ff9439,-1px -1px #002428;color:#673928;font-family:'Lobster',cursive;border:2px #4c342b;background-color:#FFF;box-shadow:0 0 22px #444;z-index:10;position:fixed;left:0;right:0;background:url("images/wood-strip.png") repeat-x #d76828 center center}
+.top-bar a,.bottom-bar a,.top-bar a:visited,.bottom-bar a:visited{color:#673928;text-decoration:none}
+.top-bar a:hover,.bottom-bar a:hover{color:#002428}
 .top-bar{top:0;padding-bottom:8px;font-size:335%;border-style:none none solid}
 .top-bar .e{font-size:74%}
 .bottom-bar{bottom:0;padding:8px;font-size:220%;line-height:50px;border-style:solid none none}
