@@ -1,3 +1,9 @@
-$(function() {
-    angular.module('jueks');
+$(function () {
+    angular.module('jueks').controller('main',
+        ['$scope',
+            function ($scope) {
+                $scope.foo = "hello world";
+
+
+            }]);
 })();

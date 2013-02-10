@@ -18,5 +18,9 @@
 .page blockquote{color:#d76828;font-style:italic;position:relative;margin:auto .75in;min-height:36px}
 .page blockquote:before{content:"“";font-size:140px;left:-64px;line-height:100px;position:absolute;top:0}
 .page blockquote:after{bottom:-10px;content:"”";font-size:140px;line-height:0;position:absolute;right:-40px}
+.page table{border:1px solid #673928;margin:0 auto .1in}
+.page table thead td{font-weight:bold}
+.page table td{border:1px #673928;border-style:none solid solid none;padding:8px}
+.page table tbody tr:last-child td{border-style:none solid none none}
 ul{padding-bottom:.1in}
 ul li{margin-left:.25in;list-style:circle}
