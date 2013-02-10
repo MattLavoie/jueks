@@ -11,192 +11,340 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset-fonts-grids/reset-fonts-grids.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://yui.yahooapis.com/2.9.0/build/reset-fonts-grids/reset-fonts-grids.css">
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style/style.min.css">
 </head>
 <body>
-    <div class="top-bar">/ juː/ /ˈ<span class="e">E</span>ks/</div>
+<div class="top-bar">/ juː/ /ˈ<span class="e">E</span>ks/</div>
 
 
+<div class="bottom-bar">
+    Recent Posts
+    &bull;
+    Table of Contents
+    &bull;
+    Connect
 
-    <div class="bottom-bar">
-            Recent Posts
-&bull;
-            Table of Contents
-&bull;
-            Connect
+</div>
 
-    </div>
-
-    <div class="full-page">
+<div class="full-page">
     <div class="content">
         <div class="page">
-        <h1>User Interface &amp;<br /> Interaction Design</h1>
+            <h1>User Interface &amp;<br/> Interaction Design</h1>
 
-        <h3>A Compilation of Research and Musings About how we Interact With Software</h3>
-        <h4>June 2011</h4>
-        <br /><br />
+            <h3>A Compilation of Research and Musings About how we Interact With Software</h3>
+            <h4>June 2011</h4>
+            <br/><br/>
 
-        <p>A user interface is more about how an application acts than how it looks.</p>
+            <p><strong>A user interface is more about how an application acts than how it looks.</strong></p>
 
-        <p>There are thousands of resources that can be found on the web and in print dealing with user interface and interaction. Now I am surely not an expert on such things, but in an effort to improve my knowledge on the best methods to utilize when attempting to provide and clean and well built user experience, I have read over quite a few of these resources. I was quite surprised to find that there were not a lot of conflicting views. In fact most contained many of the same or similar concepts.</p>
+            <p>There are thousands of resources that can be found on the web and in print dealing with user interface
+                and interaction. Now I am surely not an expert on such things, but in an effort to improve my knowledge
+                on the best methods to utilize when attempting to provide and clean and well built user experience, I
+                have read over quite a few of these resources. I was quite surprised to find that there were not a lot
+                of conflicting views. In fact most contained many of the same or similar concepts.</p>
 
-        This led me to the conclusion that it is not that we, the developer community at large, don’t know what makes a good user interface, its simply that it is exceedingly difficult to effectively execute these concepts in the production of an application. This can be due to poor planning, rushed schedules, on-the-spot decisions, or any number of other causes.
+            <p>This led me to the conclusion that it is not that we, the developer community at large, don’t know what
+                makes a good user interface, its simply that it is exceedingly difficult to effectively execute these
+                concepts in the production of an application. This can be due to poor planning, rushed schedules,
+                on-the-spot decisions, or any number of other causes.</p>
 
-        Therefore, I have compiled this list of concepts to keep in mind when designing user interfaces. These concepts have been distilled out of several of my favorite UX design resources and mixed in with some of my own thoughts on the matter. This document was compiled with the target of web applications in mind, but still applies to software in general.
-        Improve User Flow
+            <p>Therefore, I have compiled this list of concepts to keep in mind when designing user interfaces. These
+                concepts have been distilled out of several of my favorite UX design resources and mixed in with some of
+                my own thoughts on the matter. This document was compiled with the target of web applications in mind,
+                but still applies to software in general.</p>
 
-        When a user has goals that they need to accomplish with an application, they should be able to get into a state of flow - “a condition of deep, nearly meditative involvement.” In this state they are able to quickly work towards their goals and successfully accomplish them in a more efficient manner than possible in a disrupted state.
+            <h2>Improve User Flow</h2>
 
-        There are many things that can interrupt flow, such as coworkers or email, but the one thing that should never interrupt a user’s flow is the application itself.
+            <p>When a user has goals that they need to accomplish with an application, they should be able to get into a
+                state of flow - “a condition of deep, nearly meditative involvement.” In this state they are able to
+                quickly work towards their goals and successfully accomplish them in a more efficient manner than
+                possible in a disrupted state.</p>
 
-        “It behooves us to create a software interaction that promotes and enhances flow, rather than one that includes potentially flow-breaking or flow disturbing behavior. If the program consistently rattles the user out of flow, it becomes difficult for him to regain that productive state. [...] No matter how cool your user interface is, less of it would be better.”
-        Alan Cooper and Robert Reimann,
-        About Face 2.0 (2003), p119.
+            <p>There are many things that can interrupt flow, such as coworkers or email, but the one thing that should
+                never interrupt a user’s flow is the application itself.</p>
 
-        Many developers think of an interface as a dialog between the user and the application. While this may be appropriate in some instances, most of the time a user wants to direct an application, not have a conversation with it.
+            <blockquote>It behooves us to create a software interaction that promotes and enhances flow, rather than one
+                that includes potentially flow-breaking or flow disturbing behavior. If the program consistently rattles
+                the user out of flow, it becomes difficult for him to regain that productive state. [...] No matter how
+                cool your user interface is, less of it would be better.
+            </blockquote>
+            <div class="caption">Alan Cooper and Robert Reimann,<br>
+                About Face 2.0 (2003), p119.
+            </div>
 
-        An application should do what the user asks it to, not bombard the user with modal windows asking if they are sure the action they are taking is what they want to do. Instead, just let the application do as instructed. If the user does do something that they didn’t want to do, provide them with the interface to easily undo it. This will provide a much cleaner user experience nine times out of ten, because usually when a user clicks the delete button, they really do want to delete.
+            <p>Many developers think of an interface as a dialog between the user and the application. While this may be
+                appropriate in some instances, most of the time a user wants to direct an application, not have a
+                conversation with it.</p>
 
-        One of the most common instances of unnecessary interruption that I have come across is the, “Do you want to save …” dialog. Of course I want to save, why else would I have made all of these changes? Just save automatically and let me continue on my way. Preserving the undo stack is one way of solving the edge case of a user who doesn't want to save. That way, if this is the one in 1000th time I didn’t want to save, I can simply undo.
+            <p>An application should do what the user asks it to, not bombard the user with modal windows asking if they
+                are sure the action they are taking is what they want to do. Instead, just let the application do as
+                instructed. If the user does do something that they didn’t want to do, provide them with the interface
+                to easily undo it. This will provide a much cleaner user experience nine times out of ten, because
+                usually when a user clicks the delete button, they really do want to delete.</p>
 
-        Powerful software is used to create masterpieces - masterpieces that require great thought, concentration and flow. As soon as a user is distracted because a button is out of place or a pop up invades their workspace, that flow is disrupted.
+            <p>One of the most common instances of unnecessary interruption that I have come across is the, “Do you want
+                to save …” dialog. Of course I want to save, why else would I have made all of these changes? Just save
+                automatically and let me continue on my way. Preserving the undo stack is one way of solving the edge
+                case of a user who doesn't want to save. That way, if this is the one in 1000th time I didn’t want to
+                save, I can simply undo.</p>
 
-        Write software that will “become an extension of the artists hand.” A paintbrush doesn’t ask the artist if he is sure he wants to paint a line, it simply does as it is told allowing the artist to become immersed in his work. The paintbrush is a tool enabling the artist to accomplish a task, as such, the software you write should become a tool that enables its users to accomplish a task that would be difficult or impossible for them to accomplish otherwise.
+            <p>Powerful software is used to create masterpieces - masterpieces that require great thought, concentration
+                and flow. As soon as a user is distracted because a button is out of place or a pop up invades their
+                workspace, that flow is disrupted.</p>
 
-        Provide Tight Feedback Loops
+            <p>Write software that will “become an extension of the artists hand.” A paintbrush doesn’t ask the artist
+                if he is sure he wants to paint a line, it simply does as it is told allowing the artist to become
+                immersed in his work. The paintbrush is a tool enabling the artist to accomplish a task, as such, the
+                software you write should become a tool that enables its users to accomplish a task that would be
+                difficult or impossible for them to accomplish otherwise.</p>
 
-        “If the user clicks a checkbox and nothing happens, her action is rendered ambiguous or even meaningless. [...] Thus, each interaction can and should result in a discernible change to a context-sensitive information graphic. Providing immediate feedback reduces the amount of manipulation the user must do before either reaching an adequate view or recognizing a wrong turn and backtracking.”
-        Bret Victor,
-        Magic Ink (2006), #p177.
+            <h2>Provide Tight Feedback Loops</h2>
 
-        The user experience can be greatly enhanced by modeless feedback. That is a visual presentation of changing information relevant to the current context. Modeless feedback is build into the main interface and does not interrupt the normal flow of the program.
+            <blockquote>If the user clicks a checkbox and nothing happens, her action is rendered ambiguous or even
+                meaningless. [...] Thus, each interaction can and should result in a discernible change to a
+                context-sensitive information graphic. Providing immediate feedback reduces the amount of manipulation
+                the user must do before either reaching an adequate view or recognizing a wrong turn and backtracking.
+            </blockquote>
+            <div class="caption">Bret Victor,<br>
+                Magic Ink (2006), #p177.
+            </div>
 
-        In a spreadsheet program, when you highlight a group of cells containing numeric information, the total of those cells is instantly summed and displayed in the bar at the bottom of the window. In a first person shooter, the HUD shows information about how much ammo and life your character has left while not distracting from the action on the screen. These are both examples of non-disruptive, modeless feedback.
+            <p>The user experience can be greatly enhanced by modeless feedback. That is a visual presentation of
+                changing information relevant to the current context. Modeless feedback is build into the main interface
+                and does not interrupt the normal flow of the program.</p>
 
-        Beyond giving contextual feedback on the periphery of the screen, any action a user has to perform should provide instant, non-disruptive feedback. When filling out an input field with a value that isn’t valid, let the user know as soon as they leave that field as opposed to when the try to submit the form. When a user does click a submit button disable it to prevent duplicate data submissions.
+            <p>In a spreadsheet program, when you highlight a group of cells containing numeric information, the total
+                of those cells is instantly summed and displayed in the bar at the bottom of the window. In a first
+                person shooter, the HUD shows information about how much ammo and life your character has left while not
+                distracting from the action on the screen. These are both examples of non-disruptive, modeless
+                feedback.</p>
 
-        Let the Program Work Harder instead of the User
+            <p>Beyond giving contextual feedback on the periphery of the screen, any action a user has to perform should
+                provide instant, non-disruptive feedback. When filling out an input field with a value that isn’t valid,
+                let the user know as soon as they leave that field as opposed to when the try to submit the form. When a
+                user does click a submit button disable it to prevent duplicate data submissions.</p>
 
-        “If it is worth the user entering, it is worth the program remembering.”
-        Alan Cooper and Robert Reimann,
-        About Face 2.0 (2003), p193.
+            <p>Let the Program Work Harder instead of the User</p>
 
-        Remember a users choices as defaults. If a user is creating several new objects in an application, and part of this process is filling out metadata and categorizing that object, it is very likely that they will be picking many or all of the same options next time. This can become very tedious very quickly. This problem can be easily solved if the application simply utilizes last-value predictors to infer that the user very likely is going to pick the same options they picked last time.
+            <blockquote>If it is worth the user entering, it is worth the program remembering.</blockquote>
+            <div class="caption">Alan Cooper and Robert Reimann,<br>
+            About Face 2.0 (2003), p193.</div>
 
-        Utilize decision set reduction to present the user with quick ways to access what they otherwise might be searching for. For example, if the last time a user logged in they edited a particular file, chances are they may want to continue editing that same file this time.
+            <p>Remember a users choices as defaults. If a user is creating several new objects in an application, and
+                part of this process is filling out metadata and categorizing that object, it is very likely that they
+                will be picking many or all of the same options next time. This can become very tedious very quickly.
+                This problem can be easily solved if the application simply utilizes last-value predictors to infer that
+                the user very likely is going to pick the same options they picked last time.</p>
 
-        When you get down to it, an application should really attempt to behave like a waiter at a four-star restaurant.
+            <p>Utilize decision set reduction to present the user with quick ways to access what they otherwise might be
+                searching for. For example, if the last time a user logged in they edited a particular file, chances are
+                they may want to continue editing that same file this time.</p>
 
-        “When you’re at the Ritz, and you’ve put all the marshmallows into your hot chocolate, you don’t have to ask for more. When you turn to grab another, the waiter has already silently refilled the bowl. Clippy and his wizard friends are an attempt to imitate this dapper young man, but they do a terrible job because they’ve forgotten about the silent part. Your application should anticipate the user’s needs and—without confusing or obtruding—act appropriately.”
-        Andy Matuschak,
-        User Interaction 101 (2008)
+            <p>When you get down to it, an application should really attempt to behave like a waiter at a four-star
+                restaurant.</p>
 
-        If software can make some contextual inferences about what the user wants, a much more rewarding experience can be provided with a much smaller investment of user effort. We can pull data with which we can make these inferences from a users history, current environment, and interactions.
+            <blockquote>When you’re at the Ritz, and you’ve put all the marshmallows into your hot chocolate, you don’t
+                have to ask for more. When you turn to grab another, the waiter has already silently refilled the bowl.
+                Clippy and his wizard friends are an attempt to imitate this dapper young man, but they do a terrible
+                job because they’ve forgotten about the silent part. Your application should anticipate the user’s needs
+                and—without confusing or obtruding—act appropriately.
+            </blockquote>
+            <div class="caption">Andy Matuschak,<br>
+            User Interaction 101 (2008)</div>
 
-        For example, if a user goes to their documents page in an application and they haven’t yet created a single document, why not be the four star waiter standing to the side with “create a new document” on a silver platter? Here we used the users history, or lack there of, to hold out for them what they probably were looking for.
+            <p>If software can make some contextual inferences about what the user wants, a much more rewarding
+                experience can be provided with a much smaller investment of user effort. We can pull data with which we
+                can make these inferences from a users history, current environment, and interactions.</p>
 
-        Present Information in the Best Possible Way
+            <p>For example, if a user goes to their documents page in an application and they haven’t yet created a
+                single document, why not be the four star waiter standing to the side with “create a new document” on a
+                silver platter? Here we used the users history, or lack there of, to hold out for them what they
+                probably were looking for.</p>
 
-        This section is the only one where explicit visual appearance will be discussed. While having feature rich software, and software that looks good, will get users in the door, if the software is difficult and convoluted to user, those users are going to be walking right back out.
+            <h2>Present Information in the Best Possible Way</h2>
 
-        As was stated at the very beginning of this paper, a user Interface is more about how an application acts than how it looks, but there are times when the way something looks or is presented can greatly enhance or hinder user interaction.
+            <p>This section is the only one where explicit visual appearance will be discussed. While having feature
+                rich software, and software that looks good, will get users in the door, if the software is difficult
+                and convoluted to user, those users are going to be walking right back out.</p>
 
-        “Text weight and color is used to emphasize important information and call it out when skimming. Text in grey can be read when focused upon, but disappears as background texture when skimming. All critical information is contained in a column with the width of an eyespan, with a picture to the left and supplementary information to the right. The viewer can thus run her eye vertically down this column; when she spots something interesting, she will slow down and explore horizontally.”
-        Bret Victor,
-        Magic Ink (2006), #p116.
+            <p>As was stated at the very beginning of this paper, a user Interface is more about how an application acts
+                than how it looks, but there are times when the way something looks or is presented can greatly enhance
+                or hinder user interaction.</p>
 
-        Human beings are amazing communicators, but they communicate and comprehend very differently than computers do. We have had thousands of years communicating with language, speaking sentences to each other, so why is it that software is so quick to instead present tabular, explicit data? Well the obvious answer is that it is easier to produce.
+            <blockquote>Text weight and color is used to emphasize important information and call it out when skimming.
+                Text in grey can be read when focused upon, but disappears as background texture when skimming. All
+                critical information is contained in a column with the width of an eyespan, with a picture to the left
+                and supplementary information to the right. The viewer can thus run her eye vertically down this column;
+                when she spots something interesting, she will slow down and explore horizontally.
+            </blockquote>
+            <div class="caption">Bret Victor,<br>
+            Magic Ink (2006), #p116.</div>
 
-        Lets take a row in a database about an online course a user is enrolled in:
+            <p>Human beings are amazing communicators, but they communicate and comprehend very differently than
+                computers do. We have had thousands of years communicating with language, speaking sentences to each
+                other, so why is it that software is so quick to instead present tabular, explicit data? Well the
+                obvious answer is that it is easier to produce.</p>
+
+            <p>Lets take a row in a database about an online course a user is enrolled in:</p>
 
 
+            <table>
+                <thead>
+                <tr>
+                    <td>Course</td>
+                    <td>Section</td>
+                    <td>Start Date</td>
+                    <td>End Date</td>
+                    <td>Grade</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>User Interaction Design 1</td>
+                    <td>002</td>
+                    <td>5/29/2011 13:00:00.00</td>
+                    <td>6/10/2011 16:30:00.00</td>
+                    <td>null</td>
+                </tr>
 
-        Course
-        Section
-        Start Date
-        End Date
-        Grade
-        User Interaction Design 1
-        002
-        5/29/2011 13:00:00.00
-        6/10/2011 16:30:00.00
-        null
+                </tbody>
+            </table>
 
 
-        If we have the timestamp “5/29/2011 13:00:00.00” sitting in a database somewhere, we can very easily spit that out to the end user. What if, however, we said “Tomorrow at 1pm” given that the current day is May 28? Using the users current context, that information can be presented in a much more human readable way.
+            <p>If we have the timestamp “5/29/2011 13:00:00.00” sitting in a database somewhere, we can very easily spit
+                that out to the end user. What if, however, we said “Tomorrow at 1pm” given that the current day is May
+                28? Using the users current context, that information can be presented in a much more human readable
+                way.</p>
 
-        Going beyond just a cell we could give the user all of the information in this row and bring their attention to the important bits by saying: “You are enrolled in User Interaction Design 1, section 002, which begins tomorrow at 1pm and lasts for two weeks.”
+            <p>Going beyond just a cell we could give the user all of the information in this row and bring their
+                attention to the important bits by saying: “You are enrolled in User Interaction Design 1, section 002,
+                which begins tomorrow at 1pm and lasts for two weeks.”</p>
 
-        While sentence form is a great way to present possibly confusing information in an understandable way, it isn’t always the quickest way to deliver information. Enter the sparkline.
+            <p>While sentence form is a great way to present possibly confusing information in an understandable way, it
+                isn’t always the quickest way to deliver information. Enter the sparkline.</p>
 
-        A sparkline is a simple, word-size information graphic that can contain a lot of information in a small area. Spark lines should be used when users can make decisions based on trends as opposed to exact numbers. This can also be helpful with information that can be shown as a percentage, such as how full a course is. In most cases it is helpful to tie a sparkline with a tooltip so that if the user does desire to see the numbers behind the graphic, they will be presented with them upon inspection.
+            <p>A sparkline is a simple, word-size information graphic that can contain a lot of information in a small
+                area. Spark lines should be used when users can make decisions based on trends as opposed to exact
+                numbers. This can also be helpful with information that can be shown as a percentage, such as how full a
+                course is. In most cases it is helpful to tie a sparkline with a tooltip so that if the user does desire
+                to see the numbers behind the graphic, they will be presented with them upon inspection.</p>
 
-        Its a good idea to always remember the ever popular phrase, “Keep it simple, stupid!” When giving the user tables, charts, graphs and interaction areas always strive to provide the cleanest presentation of information.
+            <p>Its a good idea to always remember the ever popular phrase, “Keep it simple, stupid!” When giving the
+                user tables, charts, graphs and interaction areas always strive to provide the cleanest presentation of
+                information.</p>
 
-        “Graphical elegance is often found in simplicity of design and complexity of data”
-        Edward R. Tuft,
-        The Visual Display of Quantitative Information, Second Edition (2001), p177.
+            <blockquote>Graphical elegance is often found in simplicity of design and complexity of data</blockquote>
+            <div class="caption">Edward R. Tuft,<br>
+            The Visual Display of Quantitative Information, Second Edition (2001), p177.</div>
 
-        Consider taking a screen shot of an application and printing it out. What could you erase from that printout while not taking away any information? The principal to keep in mind while designing the presentation of your data is the information to “ink” ratio. If there is ink on the page that doesn’t contribute relevant information, consider removing it.
+            <p>Consider taking a screen shot of an application and printing it out. What could you erase from that
+                printout while not taking away any information? The principal to keep in mind while designing the
+                presentation of your data is the information to “ink” ratio. If there is ink on the page that doesn’t
+                contribute relevant information, consider removing it.</p>
 
-        Provide Intelligent Navigation
+            <h2>Provide Intelligent Navigation</h2>
 
-        “Software that can be navigated is software in which the user can get lost.”
+            <blockquote>“Software that can be navigated is software in which the user can get lost.”</blockquote>
 
-        One of the biggest problems with the current user interaction paradigm is that it has been designed for what computers were many years ago. Software was more static, memory had to be conserved, programs weren’t able to know much about the world they lived in. We have modeled these applications on mechanical contraptions that exist in our physical world. We have built virtual sliders, buttons and nobs so that our software can be manipulated in much the same way a piece of machinery would be.
+            <p>One of the biggest problems with the current user interaction paradigm is that it has been designed for
+                what computers were many years ago. Software was more static, memory had to be conserved, programs
+                weren’t able to know much about the world they lived in. We have modeled these applications on
+                mechanical contraptions that exist in our physical world. We have built virtual sliders, buttons and
+                nobs so that our software can be manipulated in much the same way a piece of machinery would be.</p>
 
-        But why do we do this? It may be an easier way for us to imagine up these platforms for information, but often times we unintentionally limit ourselves to extensive, convoluted, physically interpretable navigation simply because we have not considered alternatives to what software developers have been doing for years.
+            <p>But why do we do this? It may be an easier way for us to imagine up these platforms for information, but
+                often times we unintentionally limit ourselves to extensive, convoluted, physically interpretable
+                navigation simply because we have not considered alternatives to what software developers have been
+                doing for years.</p>
 
-        In modern applications, resources at hand are extensive. We have tons of information about the contexts in which people use our software. We have more information than we know what to do with. So why don’t we do something with it? Give your users all the information they could possibly be looking for, and an easy way to access it.
+            <p>In modern applications, resources at hand are extensive. We have tons of information about the contexts
+                in which people use our software. We have more information than we know what to do with. So why don’t we
+                do something with it? Give your users all the information they could possibly be looking for, and an
+                easy way to access it.</p>
 
-        “Even software that starts out information-rich and interaction-simple tends to accumulate wasteful manipulation as features are added over successive versions. It’s easier on both the designer and the programmer to plug in another menu item and dialog box than to redesign a dynamic graphic, and sometimes it’s justified as a less jarring change for the user. After ten versions, the software can grow into a monstrosity, with the user spending more time pulling down menus than studying and learning information.”
-        Bret Victor,
-        Magic Ink (2006), #p183.
+            <blockquote>Even software that starts out information-rich and interaction-simple tends to accumulate
+                wasteful manipulation as features are added over successive versions. It’s easier on both the designer
+                and the programmer to plug in another menu item and dialog box than to redesign a dynamic graphic, and
+                sometimes it’s justified as a less jarring change for the user. After ten versions, the software can
+                grow into a monstrosity, with the user spending more time pulling down menus than studying and learning
+                information.
+            </blockquote>
+            <div class="caption">Bret Victor,<br>
+            Magic Ink (2006), #p183.</div>
 
-        Provide Intelligent Interaction
+            <h2>Provide Intelligent Interaction</h2>
 
-        The best interaction is no interaction. If a user is immediately given the information they want, the application has succeeded. Unfortunately that is not always possible, so an application should strive to minimize the navigation and processes that stand between a user and that information finish line.
+            <p>The best interaction is no interaction. If a user is immediately given the information they want, the
+                application has succeeded. Unfortunately that is not always possible, so an application should strive to
+                minimize the navigation and processes that stand between a user and that information finish line.</p>
 
-        Any developer, UX or UI designer knows that there are a hundred ways to go about any software challenge, and though many are less than optimal, it isn’t always easy to say one may be better than the next. That being said, pick and choose the design/UX patterns you choose carefully, and keep in mind that no solution is the best for every use case. So in an attempt to stay out of the multitude of interaction design patterns out there, the focus will instead be placed on some more general thoughts on interaction.
+            <p>Any developer, UX or UI designer knows that there are a hundred ways to go about any software challenge,
+                and though many are less than optimal, it isn’t always easy to say one may be better than the next. That
+                being said, pick and choose the design/UX patterns you choose carefully, and keep in mind that no
+                solution is the best for every use case. So in an attempt to stay out of the multitude of interaction
+                design patterns out there, the focus will instead be placed on some more general thoughts on
+                interaction.</p>
 
-        Don’t ask the user questions, instead present them with choices. As was mentioned earlier in section 3, your application should behave like a four star service attendant. Once it starts asking the user questions, the user starts working for the application as opposed to the other way around. Though this may not be obvious, apparent, or intended, it can be a trap that is all too easy to fall into.
+            <p>Don’t ask the user questions, instead present them with choices. As was mentioned earlier in section 3,
+                your application should behave like a four star service attendant. Once it starts asking the user
+                questions, the user starts working for the application as opposed to the other way around. Though this
+                may not be obvious, apparent, or intended, it can be a trap that is all too easy to fall into.</p>
 
-        Allow the user to edit information in the same place they go to see that information. If I am looking at a document I should be able to edit that document and anything pertaining to that document right where I see it. Edit-in-place has started to become a more common concept in the computing world and can greatly decrease the number of pages a user has to look at to do a simple task such as changing the title of a document.
+            <p>Allow the user to edit information in the same place they go to see that information. If I am looking at
+                a document I should be able to edit that document and anything pertaining to that document right where I
+                see it. Edit-in-place has started to become a more common concept in the computing world and can greatly
+                decrease the number of pages a user has to look at to do a simple task such as changing the title of a
+                document.</p>
 
-        Improve Software Transparency
+            <h2>Improve Software Transparency</h2>
 
-        “Programmers are judged by their ability to create software that handles the many possible, but improbable, conditions that crop up inside complex logical systems. This doesn’t mean, however, that they should render that readiness to handle offbeat possibilities directly into the user interface. [...] Design for the probable case; provide for the possible case.”
-        Alan Cooper and Robert Reimann,
-        About Face 2.0 (2003), p125.
+            <blockquote>Programmers are judged by their ability to create software that handles the many possible, but
+                improbable, conditions that crop up inside complex logical systems. This doesn’t mean, however, that
+                they should render that readiness to handle offbeat possibilities directly into the user interface.
+                [...] Design for the probable case; provide for the possible case.
+            </blockquote>
+            <div class="caption">Alan Cooper and Robert Reimann,<br>
+            About Face 2.0 (2003), p125.</div>
 
-        At the beginning of this paper was the section on not interrupting a user’s flow. This is the driving point behind user interaction design. The subsequent sections talked about general concepts and methodologies to work towards that goal of producing “flow friendly” applications. Software transparency should be the consequence of following those concepts.
+            <p>At the beginning of this paper was the section on not interrupting a user’s flow. This is the driving
+                point behind user interaction design. The subsequent sections talked about general concepts and
+                methodologies to work towards that goal of producing “flow friendly” applications. Software transparency
+                should be the consequence of following those concepts.</p>
 
-        Here is the short list to re-enforce the techniques discussed to work towards software transparency and avoiding software excess.
+            <p>Here is the short list to re-enforce the techniques discussed to work towards software transparency and
+                avoiding software excess.</p>
+            <ul>
+                <li>Let the user edit content in the same place they see content.</li>
+                <li>Remember what the user enters; don’t make the user re-enter the same thing over and over.</li>
+                <li>Don’t require fields that don’t have to be required.</li>
+                <li>Always save automatically.</li>
+                <li>Always provide for a way to undo actions that can be undone.</li>
+                <li>Don’t ask the user to confirm their actions.</li>
+                <li>Don’t force the user to ask for permission.</li>
+                <li>Don’t ever interrupt the user’s flow when it can be avoided.</li>
+                <li>Always give the user immediate, non-disruptive feedback for any action they take.</li>
+            </ul>
 
-        Let the user edit content in the same place they see content.
-        Remember what the user enters; don’t make the user re-enter the same thing over and over.
-        Don’t require fields that don’t have to be required.
-        Always save automatically.
-        Always provide for a way to undo actions that can be undone.
-        Don’t ask the user to confirm their actions.
-        Don’t force the user to ask for permission.
-        Don’t ever interrupt the user’s flow when it can be avoided.
-        Always give the user immediate, non-disruptive feedback for any action they take.
+            <p>Software transparency, simplicity, elegance, whatever you want to call it, is the state you arrive at when
+            you write an application that follows these guidelines to promote user flow. What follows is a tool which
+            can be used without difficulty, strain or discouraging interruption. Now this isn’t to say that the
+            application is lack luster, feature weak, or confusing. Instead it implies that the software is elegant,
+            full of appropriate and powerful features and lacking in superfluous ones. Software can be complex where it
+            needs to be, but that doesn’t mean it has to be confusing.</p>
 
-        Software transparency, simplicity, elegance, whatever you want to call it, is the state you arrive at when you write an application that follows these guidelines to promote user flow. What follows is a tool which can be used without difficulty, strain or discouraging interruption. Now this isn’t to say that the application is lack luster, feature weak, or confusing. Instead it implies that the software is elegant, full of appropriate and powerful features and lacking in superfluous ones. Software can be complex where it needs to be, but that doesn’t mean it has to be confusing.
+            <h2>References and Further Reading</h2>
 
-        References and Further Reading
-
-        Alan Cooper and Robert Reimann, About Face 2.0 (2003)
-        Bret Victor, Magic Ink (2006)
-        Andy Matuschak, User Interaction 101 (2008)
-        Dmitry Fadeyev, Smashing Magazine 10 Useful Web Application Interface Techniques (2009)
-        Edward R. Tuft, The Visual Display of Quantitative Information, Second Edition (2001)
+            <p>Alan Cooper and Robert Reimann, About Face 2.0 (2003)</p>
+            <p>Bret Victor, Magic Ink (2006)</p>
+            <p>Andy Matuschak, User Interaction 101 (2008)</p>
+            <p>Dmitry Fadeyev, Smashing Magazine 10 Useful Web Application Interface Techniques (2009)</p>
+            <p>Edward R. Tuft, The Visual Display of Quantitative Information, Second Edition (2001)</p>
         </div>
     </div>
-    </div>
+</div>
 
 </body>
 </html>
