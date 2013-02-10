@@ -1,5 +1,14 @@
-.top-bar,.bottom-bar{font-family:'Lobster',cursive;border:2px #000;box-shadow:0 0 22px #444}
-.top-bar{position:absolute;top:0;left:0;right:0;padding-bottom:8px;font-size:335%;border-style:none none solid}
+.top-bar,.bottom-bar{text-shadow:1px 1px #ff9439,-1px -1px #002428;color:#673928;font-family:'Lobster',cursive;border:2px #4c342b;background-color:#FFF;box-shadow:0 0 22px #444;z-index:10;position:fixed;left:0;right:0;background:url("images/wood-strip.png") repeat-x #d76828 center center}
+.top-bar{top:0;padding-bottom:8px;font-size:335%;border-style:none none solid}
 .top-bar .e{font-size:74%}
-.bottom-bar{position:absolute;bottom:0;left:0;right:0;padding:8px;font-size:220%;border-style:solid none none}
-.content{position:absolute;top:0;left:0;bottom:0;right:0;background:url("images/canvas-tile.png") repeat}
+.bottom-bar{bottom:0;padding:8px;font-size:220%;line-height:50px;border-style:solid none none}
+.full-page{position:absolute;top:0;left:0;bottom:0;right:0}
+.content{background:url("images/canvas-tile.png") repeat;min-height:100%;padding:80px 20px}
+.content .page{background:#FFF;max-width:7.5in;padding:.5in;text-align:justify;border:1px solid #002428;margin:auto;box-shadow:0 0 12px #444}
+.page h1{color:#d76828;font-size:404%;font-family:'Lobster',cursive;text-align:center}
+.page h3{color:#673928;font-size:138.5%;text-align:center}
+.page h4,.page p,.page em,.page strong{color:#4c342b;font-size:123.1%;letter-spacing:.1em}
+.page h4{text-align:center;color:#d76828}
+.page em{font-style:italic}
+.page strong{color:#d76828}
+.page p{text-indent:.25in;padding-bottom:.1in}
